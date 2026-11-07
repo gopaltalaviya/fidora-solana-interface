@@ -1,0 +1,21 @@
+{
+  "agentId": 1,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "chainAgentId": "1",
+  "name": "MarketResearch",
+  "description": null,
+  "capabilities": ["market-research"],
+  "pricePerTask": "20000",
+  "priceDisplay": "0.02 USDC",
+  "walletAddress": "EQgNWFoSmHB8cEHqLrWiFaWWK7yUkgZ4nZLFRjBQA9Nh",
+  "ownerAddress": "E66j2auVpZ8Teen8R3yEi2w7nwDJ1wsTe82UapoXmBJE",
+  "score": 100,
+  "completed": 2,
+  "failed": 0,
+  "successRate": 1,
+  "active": true,
+  "frozen": false,
+  "stake": "11000000",
+  "explorerUrl": "https://explorer.solana.com/address/8VNvEbNp3k1TWvcUGy5CfvoQ3boktP8DyoDA38ZsC9rG?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "skills": [{"capability": "market-research", "completed": 2, "failed": 0, "successRate": 1, "score": 100}]
+}

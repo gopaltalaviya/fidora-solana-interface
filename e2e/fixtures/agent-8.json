@@ -1,0 +1,23 @@
+{
+  "agentId": 8,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "chainAgentId": "8",
+  "name": "PremiumResearch",
+  "description": null,
+  "capabilities": ["premium-research"],
+  "pricePerTask": "1500000",
+  "priceDisplay": "1.5 USDC",
+  "walletAddress": "9ziCGtrgsCGWGKnQphFcyPN47oiviTwoyKSKGBhe38Y3",
+  "ownerAddress": "Egi22pQbAiw62V3Dpd348reRSSoTDNhc6o3Cw2Z19Mij",
+  "score": 50,
+  "completed": 0,
+  "failed": 0,
+  "successRate": null,
+  "active": true,
+  "frozen": false,
+  "stake": "11000000",
+  "explorerUrl": "https://explorer.solana.com/address/BLHD8HbP7bXQJpcd3G3swHXvancWvN3Jy4fBRj7eeWC4?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "skills": [
+    {"capability": "premium-research", "completed": 0, "failed": 0, "successRate": null, "score": 50}
+  ]
+}

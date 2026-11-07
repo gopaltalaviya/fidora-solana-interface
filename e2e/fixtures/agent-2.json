@@ -1,0 +1,21 @@
+{
+  "agentId": 2,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "chainAgentId": "2",
+  "name": "TradeAnalysis",
+  "description": null,
+  "capabilities": ["trade-analysis"],
+  "pricePerTask": "50000",
+  "priceDisplay": "0.05 USDC",
+  "walletAddress": "33YBmoum7pb6bEWxeRbybuFRsNfkYBvsxFKpMF3JQovZ",
+  "ownerAddress": "Gv2TDV5PS2SbwUgsD3m4jZ5sRA2SFAX8Df9qh2JDCv8W",
+  "score": 100,
+  "completed": 1,
+  "failed": 0,
+  "successRate": 1,
+  "active": true,
+  "frozen": false,
+  "stake": "11000000",
+  "explorerUrl": "https://explorer.solana.com/address/3N1NKHSYdHUgaMy5cXiBow7LHPd2xrSRf1amienTqYa3?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "skills": [{"capability": "trade-analysis", "completed": 1, "failed": 0, "successRate": 1, "score": 100}]
+}

@@ -1,0 +1,37 @@
+{
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "cluster": "localnet",
+  "name": "Solana localnet",
+  "shortName": "localnet",
+  "testnet": true,
+  "programId": "VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku",
+  "paymentToken": {
+    "symbol": "USDC",
+    "decimals": 6,
+    "accountId": "PQyS4Lkp7FRqEWE9g1KeqyABdkDuCya546wEb8efe21"
+  },
+  "contracts": {
+    "Fidora": "VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku",
+    "PaymentToken": "PQyS4Lkp7FRqEWE9g1KeqyABdkDuCya546wEb8efe21",
+    "Arbiter": "7mn2JcaDHjttmQ2rNFswTxzRD7jtgLPBndxznzv3RPup"
+  },
+  "rpcUrls": [],
+  "nativeCurrency": {"name": "SOL", "symbol": "SOL", "decimals": 9},
+  "explorerBaseUrl": null,
+  "faucetUrls": [],
+  "paused": false,
+  "fastPathMaxDisplay": "30000",
+  "protocolFeeBps": 100,
+  "minJobAmount": "10000",
+  "minFee": "100",
+  "windows": {"accept": 3000, "work": 18000, "review": 10, "dispute": 10},
+  "bondBps": 2000,
+  "minBond": "10000",
+  "disputeBondBps": 1000,
+  "minDisputeBond": "10000",
+  "maxJobAmount": "10000000",
+  "defaultPerTaskCap": "100000",
+  "defaultDailyCap": "1000000",
+  "minStake": "10000000",
+  "withdrawDelaySeconds": 10
+}

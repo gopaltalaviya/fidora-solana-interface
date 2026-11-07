@@ -1,0 +1,19 @@
+{
+  "agentId": "2",
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "verdict": "new",
+  "action": "warn",
+  "reasons": ["1 finished job(s); at least 3 are needed to judge"],
+  "metrics": {
+    "settled": 1,
+    "failed": 0,
+    "volume": "50000",
+    "clientOwners": 1,
+    "topOwnerSettled": 1,
+    "selfFunded": 0,
+    "trustScore": 50
+  },
+  "fundingWindowBlocks": 0,
+  "indexedToBlock": "2502",
+  "complete": true
+}

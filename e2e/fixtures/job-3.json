@@ -1,0 +1,86 @@
+{
+  "id": "3",
+  "address": "82LKF91EHLy3J53DDnMMxxMVtqEqWQGq2TQVeZ7HRaYX",
+  "client": "4",
+  "worker": "1",
+  "amount": "20000",
+  "fee": "200",
+  "state": "settled",
+  "outcome": "success",
+  "acceptDeadline": 1794054714,
+  "workDeadline": 1794056514,
+  "reviewDeadline": 1794054433,
+  "disputeDeadline": 0,
+  "specHash": "c70c05314761c00b0c96facb51b2ecb6d77923d852b4f2400604636a061eb542",
+  "resultHash": "70c9c8629188bf2c152d9cea55dd914fc3a92174c017705f683c6a3b114ffc41",
+  "workerBond": "10000",
+  "disputeBond": "10000",
+  "createdAt": 1794054414,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "amountDisplay": "0.02 USDC",
+  "clientName": "orchestrator",
+  "workerName": "MarketResearch",
+  "explorerUrl": "https://explorer.solana.com/address/82LKF91EHLy3J53DDnMMxxMVtqEqWQGq2TQVeZ7HRaYX?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "events": [
+    {
+      "kind": "JobCreated",
+      "summary": "Job #3: orchestrator locked 0.02 USDC in escrow to hire MarketResearch",
+      "jobId": "3",
+      "agentIds": ["4", "1"],
+      "slot": 198,
+      "at": "2026-11-07T12:26:54.000Z",
+      "signature": "2d1wLBVPEhtMpPZ1XUhxauSmGgMf7maFwDiVcgQpfcdhVxyLh5vWgdz1sfB9J5q9RGNp6n4K2Fubv3SH5qSpwSiu",
+      "explorerUrl": "https://explorer.solana.com/tx/2d1wLBVPEhtMpPZ1XUhxauSmGgMf7maFwDiVcgQpfcdhVxyLh5vWgdz1sfB9J5q9RGNp6n4K2Fubv3SH5qSpwSiu?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobAccepted",
+      "summary": "Job #3 accepted by the worker",
+      "jobId": "3",
+      "agentIds": ["1"],
+      "slot": 219,
+      "at": "2026-11-07T12:27:03.000Z",
+      "signature": "4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be",
+      "explorerUrl": "https://explorer.solana.com/tx/4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "ResultSubmitted",
+      "summary": "Job #3: result delivered; its hash is now on chain",
+      "jobId": "3",
+      "agentIds": [],
+      "slot": 219,
+      "at": "2026-11-07T12:27:03.000Z",
+      "signature": "4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be",
+      "explorerUrl": "https://explorer.solana.com/tx/4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobSettled",
+      "summary": "Job #3 settled: 0.0198 USDC paid to MarketResearch (Success)",
+      "jobId": "3",
+      "agentIds": ["1"],
+      "slot": 234,
+      "at": "2026-11-07T12:27:09.000Z",
+      "signature": "2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo",
+      "explorerUrl": "https://explorer.solana.com/tx/2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #3: MarketResearch reviewed 100/100 as worker",
+      "jobId": "3",
+      "agentIds": ["1"],
+      "slot": 234,
+      "at": "2026-11-07T12:27:09.000Z",
+      "signature": "2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo",
+      "explorerUrl": "https://explorer.solana.com/tx/2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #3: orchestrator reviewed 100/100 as client",
+      "jobId": "3",
+      "agentIds": ["4"],
+      "slot": 234,
+      "at": "2026-11-07T12:27:09.000Z",
+      "signature": "2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo",
+      "explorerUrl": "https://explorer.solana.com/tx/2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    }
+  ]
+}

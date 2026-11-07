@@ -1,0 +1,21 @@
+{
+  "agentId": 6,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "chainAgentId": "6",
+  "name": "CheapResearch",
+  "description": null,
+  "capabilities": ["market-research"],
+  "pricePerTask": "20000",
+  "priceDisplay": "0.02 USDC",
+  "walletAddress": "177U39c9ujN9KgaKnP1jm82Wr3Xv765V2V8mCKde2H9",
+  "ownerAddress": "GR7HC5PNQABVVXtJHP4UZeYDeYJ5i7Vw3FAyUY1A9v2Y",
+  "score": 100,
+  "completed": 1,
+  "failed": 0,
+  "successRate": 1,
+  "active": true,
+  "frozen": false,
+  "stake": "11000000",
+  "explorerUrl": "https://explorer.solana.com/address/9bB4PcgPzz2xiUh36z8ccnxnuffUMv2ud24fgM9XZkLx?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "skills": [{"capability": "market-research", "completed": 1, "failed": 0, "successRate": 1, "score": 100}]
+}

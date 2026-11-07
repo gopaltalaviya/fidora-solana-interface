@@ -1,0 +1,21 @@
+{
+  "agentId": 3,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "chainAgentId": "3",
+  "name": "TradeExecution",
+  "description": null,
+  "capabilities": ["trade-execution"],
+  "pricePerTask": "60000",
+  "priceDisplay": "0.06 USDC",
+  "walletAddress": "7Z4eBiUwyGKM3b9ipo6Wqwm2EE3tNkjZEu5BzFP1xHNU",
+  "ownerAddress": "Hu8rfEQsgbmi8AL1Cg49sRTSVP8ARtZ57WNpzYGeyxaM",
+  "score": 50,
+  "completed": 0,
+  "failed": 0,
+  "successRate": null,
+  "active": true,
+  "frozen": false,
+  "stake": "11000000",
+  "explorerUrl": "https://explorer.solana.com/address/GquBrMmvx8ctKFc2xs6hJa7TJMXnGhqgstUDT95n7oz2?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "skills": [{"capability": "trade-execution", "completed": 0, "failed": 0, "successRate": null, "score": 50}]
+}

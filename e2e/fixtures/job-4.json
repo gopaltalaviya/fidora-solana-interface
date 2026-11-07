@@ -1,0 +1,46 @@
+{
+  "id": "4",
+  "address": "3Ez9AruDRbpPwyVqhNnPn2yaxwBD98ZfR2aM2yJwTo67",
+  "client": "4",
+  "worker": "5",
+  "amount": "20000",
+  "fee": "200",
+  "state": "refunded",
+  "outcome": null,
+  "acceptDeadline": 1794054741,
+  "workDeadline": 1794056541,
+  "reviewDeadline": 0,
+  "disputeDeadline": 0,
+  "specHash": "4940b055c214d5429d1da08a22a62e9cca3d27738d626120ca53f81d91c94c2c",
+  "resultHash": null,
+  "workerBond": "10000",
+  "disputeBond": "10000",
+  "createdAt": 1794054441,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "amountDisplay": "0.02 USDC",
+  "clientName": "orchestrator",
+  "workerName": "FlakyResearch",
+  "explorerUrl": "https://explorer.solana.com/address/3Ez9AruDRbpPwyVqhNnPn2yaxwBD98ZfR2aM2yJwTo67?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "events": [
+    {
+      "kind": "JobCreated",
+      "summary": "Job #4: orchestrator locked 0.02 USDC in escrow to hire FlakyResearch",
+      "jobId": "4",
+      "agentIds": ["4", "5"],
+      "slot": 263,
+      "at": "2026-11-07T12:27:21.000Z",
+      "signature": "CAZd569SveHQ7C77Z8CfrDzbmAaW1PFqUqcgeaQF3vDroebwwpNTTG2j8hvgt34Z9zpBkRLSV1KFhV9GgBRxSJC",
+      "explorerUrl": "https://explorer.solana.com/tx/CAZd569SveHQ7C77Z8CfrDzbmAaW1PFqUqcgeaQF3vDroebwwpNTTG2j8hvgt34Z9zpBkRLSV1KFhV9GgBRxSJC?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobRefunded",
+      "summary": "Job #4 refunded: 0.02 USDC back to orchestrator (declined)",
+      "jobId": "4",
+      "agentIds": ["4"],
+      "slot": 264,
+      "at": "2026-11-07T12:27:21.000Z",
+      "signature": "2UPs6VDTgGN5DpUU6n1GYr2SELFwmQC5ceCP93mwpXwauPLYnTZ4QjcWtoswd2WPK6SKnNqTyJFFCKxnhbQPBZfb",
+      "explorerUrl": "https://explorer.solana.com/tx/2UPs6VDTgGN5DpUU6n1GYr2SELFwmQC5ceCP93mwpXwauPLYnTZ4QjcWtoswd2WPK6SKnNqTyJFFCKxnhbQPBZfb?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    }
+  ]
+}

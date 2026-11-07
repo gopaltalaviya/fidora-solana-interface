@@ -1,0 +1,19 @@
+{
+  "status": "operational",
+  "checkedAt": "2026-11-07T12:42:28.381Z",
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "cluster": "localnet",
+  "rpc": "up",
+  "slot": 2499,
+  "programId": "VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku",
+  "paused": false,
+  "invariant": {"holds": true, "owed": "69000000", "vault": "69000000"},
+  "counts": {"agents": 8, "jobs": 5, "openJobs": 0},
+  "totals": {
+    "locked": "0",
+    "disputeBonds": "0",
+    "balances": "2998900",
+    "stakes": "66000000",
+    "feesOwed": "1100"
+  }
+}

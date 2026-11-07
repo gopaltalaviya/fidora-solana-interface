@@ -1,0 +1,19 @@
+{
+  "agentId": "6",
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "verdict": "self-funded",
+  "action": "block",
+  "reasons": ["1 of 1 paid jobs (100%) were paid by a client that had been funded from this worker's side"],
+  "metrics": {
+    "settled": 1,
+    "failed": 0,
+    "volume": "20000",
+    "clientOwners": 1,
+    "topOwnerSettled": 1,
+    "selfFunded": 1,
+    "trustScore": 50
+  },
+  "fundingWindowBlocks": 0,
+  "indexedToBlock": "2502",
+  "complete": true
+}

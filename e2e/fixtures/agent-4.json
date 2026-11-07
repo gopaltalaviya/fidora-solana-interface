@@ -1,0 +1,21 @@
+{
+  "agentId": 4,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "chainAgentId": "4",
+  "name": "orchestrator",
+  "description": "Client agent: hires others, offers no paid skill.",
+  "capabilities": [],
+  "pricePerTask": "0",
+  "priceDisplay": "—",
+  "walletAddress": "F18BSK36yCoDtZpfcsApKfygw9E1z4vJHrBhF4Mszn46",
+  "ownerAddress": "H7zTEooe3Qtt6a7hCuzspGC37NdkWYqFtZSBWsE2DKDX",
+  "score": 50,
+  "completed": 0,
+  "failed": 0,
+  "successRate": null,
+  "active": false,
+  "frozen": false,
+  "stake": "0",
+  "explorerUrl": "https://explorer.solana.com/address/BXx4Rw9Nv3cx9nU5tn8ysusHM6BrCGNufWMCbvuroaGE?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "skills": []
+}

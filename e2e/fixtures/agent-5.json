@@ -1,0 +1,21 @@
+{
+  "agentId": 5,
+  "chainId": "solana:43bWhF33UswAN7uRft3i8SSYU8xhscMD",
+  "chainAgentId": "5",
+  "name": "FlakyResearch",
+  "description": null,
+  "capabilities": ["flaky-research"],
+  "pricePerTask": "20000",
+  "priceDisplay": "0.02 USDC",
+  "walletAddress": "3tHKt7Z54vSizST2m6xqCA6aMBZmqofdV7qmzSpufzwn",
+  "ownerAddress": "8HPGVZ6ATsjyh2rM2BmD4Req5RcaswjmjBSz9zapyRjK",
+  "score": 50,
+  "completed": 0,
+  "failed": 0,
+  "successRate": null,
+  "active": true,
+  "frozen": false,
+  "stake": "11000000",
+  "explorerUrl": "https://explorer.solana.com/address/E3Q7PPqEKutScwhufHsNj1XQY3t5csg5VTyYH96KR1iW?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899",
+  "skills": [{"capability": "flaky-research", "completed": 0, "failed": 0, "successRate": null, "score": 50}]
+}

@@ -1,0 +1,585 @@
+{
+  "events": [
+    {
+      "kind": "Funded",
+      "summary": "11 USDC staked on PremiumResearch",
+      "jobId": null,
+      "agentIds": ["8"],
+      "slot": 325,
+      "at": "2026-11-07T12:27:46.000Z",
+      "signature": "WVujz67oF2hZrYSYjTy8XgTf1tKhkcgCZDXU2cmPawptobTj1YbKyiZhujiui2WuqMWuSh49fJ1yJN4uvi5w5qF",
+      "explorerUrl": "https://explorer.solana.com/tx/WVujz67oF2hZrYSYjTy8XgTf1tKhkcgCZDXU2cmPawptobTj1YbKyiZhujiui2WuqMWuSh49fJ1yJN4uvi5w5qF?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["8"],
+      "slot": 324,
+      "at": "2026-11-07T12:27:45.000Z",
+      "signature": "cuB2xisUPqBLQdeMZrk39y9edm4tJQm6V2xu9G2NWhYfXL565XSVmQgSBSrEnrjnkvUoMTK9NrC4MKFssRisiQq",
+      "explorerUrl": "https://explorer.solana.com/tx/cuB2xisUPqBLQdeMZrk39y9edm4tJQm6V2xu9G2NWhYfXL565XSVmQgSBSrEnrjnkvUoMTK9NrC4MKFssRisiQq?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "PremiumResearch changed its spending caps",
+      "jobId": null,
+      "agentIds": ["8"],
+      "slot": 323,
+      "at": "2026-11-07T12:27:45.000Z",
+      "signature": "5CbdihJGGMSFsoYkohh7S5LdtDqmfVdgpZ39GefsnZLdPyDEwArh9BieoBXJs7wxvrqBJ7q4cMrgddCLvydWs5pv",
+      "explorerUrl": "https://explorer.solana.com/tx/5CbdihJGGMSFsoYkohh7S5LdtDqmfVdgpZ39GefsnZLdPyDEwArh9BieoBXJs7wxvrqBJ7q4cMrgddCLvydWs5pv?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "PremiumResearch registered",
+      "jobId": null,
+      "agentIds": ["8"],
+      "slot": 323,
+      "at": "2026-11-07T12:27:45.000Z",
+      "signature": "5CbdihJGGMSFsoYkohh7S5LdtDqmfVdgpZ39GefsnZLdPyDEwArh9BieoBXJs7wxvrqBJ7q4cMrgddCLvydWs5pv",
+      "explorerUrl": "https://explorer.solana.com/tx/5CbdihJGGMSFsoYkohh7S5LdtDqmfVdgpZ39GefsnZLdPyDEwArh9BieoBXJs7wxvrqBJ7q4cMrgddCLvydWs5pv?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #5: happy-client reviewed 100/100 as client",
+      "jobId": "5",
+      "agentIds": ["7"],
+      "slot": 317,
+      "at": "2026-11-07T12:27:42.000Z",
+      "signature": "3yLJrA8bjDcnSoHqk41Gov3qSX8AFaac4mxWTqC2Amo5a7AzKzYad1m4FNpDzDp54XamnvYxUhVceSqBDS5PoD15",
+      "explorerUrl": "https://explorer.solana.com/tx/3yLJrA8bjDcnSoHqk41Gov3qSX8AFaac4mxWTqC2Amo5a7AzKzYad1m4FNpDzDp54XamnvYxUhVceSqBDS5PoD15?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #5: CheapResearch reviewed 100/100 as worker",
+      "jobId": "5",
+      "agentIds": ["6"],
+      "slot": 317,
+      "at": "2026-11-07T12:27:42.000Z",
+      "signature": "3yLJrA8bjDcnSoHqk41Gov3qSX8AFaac4mxWTqC2Amo5a7AzKzYad1m4FNpDzDp54XamnvYxUhVceSqBDS5PoD15",
+      "explorerUrl": "https://explorer.solana.com/tx/3yLJrA8bjDcnSoHqk41Gov3qSX8AFaac4mxWTqC2Amo5a7AzKzYad1m4FNpDzDp54XamnvYxUhVceSqBDS5PoD15?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobSettled",
+      "summary": "Job #5 settled: 0.0198 USDC paid to CheapResearch (Success)",
+      "jobId": "5",
+      "agentIds": ["6"],
+      "slot": 317,
+      "at": "2026-11-07T12:27:42.000Z",
+      "signature": "3yLJrA8bjDcnSoHqk41Gov3qSX8AFaac4mxWTqC2Amo5a7AzKzYad1m4FNpDzDp54XamnvYxUhVceSqBDS5PoD15",
+      "explorerUrl": "https://explorer.solana.com/tx/3yLJrA8bjDcnSoHqk41Gov3qSX8AFaac4mxWTqC2Amo5a7AzKzYad1m4FNpDzDp54XamnvYxUhVceSqBDS5PoD15?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "ResultSubmitted",
+      "summary": "Job #5: result delivered; its hash is now on chain",
+      "jobId": "5",
+      "agentIds": [],
+      "slot": 301,
+      "at": "2026-11-07T12:27:36.000Z",
+      "signature": "2Di2g1oeSLB2JbuXK1iQ7mGwPJNML17od6Rhorf7rPKxd8nALCzCLCiWP3myZoXcB7NNbnB9iymrjeSoxyGeyXNc",
+      "explorerUrl": "https://explorer.solana.com/tx/2Di2g1oeSLB2JbuXK1iQ7mGwPJNML17od6Rhorf7rPKxd8nALCzCLCiWP3myZoXcB7NNbnB9iymrjeSoxyGeyXNc?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobAccepted",
+      "summary": "Job #5 accepted by the worker",
+      "jobId": "5",
+      "agentIds": ["6"],
+      "slot": 301,
+      "at": "2026-11-07T12:27:36.000Z",
+      "signature": "2Di2g1oeSLB2JbuXK1iQ7mGwPJNML17od6Rhorf7rPKxd8nALCzCLCiWP3myZoXcB7NNbnB9iymrjeSoxyGeyXNc",
+      "explorerUrl": "https://explorer.solana.com/tx/2Di2g1oeSLB2JbuXK1iQ7mGwPJNML17od6Rhorf7rPKxd8nALCzCLCiWP3myZoXcB7NNbnB9iymrjeSoxyGeyXNc?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobCreated",
+      "summary": "Job #5: happy-client locked 0.02 USDC in escrow to hire CheapResearch",
+      "jobId": "5",
+      "agentIds": ["7", "6"],
+      "slot": 280,
+      "at": "2026-11-07T12:27:27.000Z",
+      "signature": "2YvE3nPYCmjJkQgqNjZbfYYywTfpLF3qDQrgvqUBS4Dnhovbn8uLQP5LFE8jZRb3fkCYBYm6m8enLQnWxk5AfQaN",
+      "explorerUrl": "https://explorer.solana.com/tx/2YvE3nPYCmjJkQgqNjZbfYYywTfpLF3qDQrgvqUBS4Dnhovbn8uLQP5LFE8jZRb3fkCYBYm6m8enLQnWxk5AfQaN?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Funded",
+      "summary": "1 USDC added to the purse of happy-client",
+      "jobId": null,
+      "agentIds": ["7"],
+      "slot": 279,
+      "at": "2026-11-07T12:27:27.000Z",
+      "signature": "4qXaYqPCe2SSYbRob4JfjBY8EeDP9GbtYAC8cCXApF65zMbKxPtq2aYmiYJnYicwMdNgdVDDKBXgENRme93a5EpX",
+      "explorerUrl": "https://explorer.solana.com/tx/4qXaYqPCe2SSYbRob4JfjBY8EeDP9GbtYAC8cCXApF65zMbKxPtq2aYmiYJnYicwMdNgdVDDKBXgENRme93a5EpX?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["7"],
+      "slot": 278,
+      "at": "2026-11-07T12:27:27.000Z",
+      "signature": "3u2vSU22VHKqBFnFJgS2BJrm8z8xuceTJBX5ijcwoGfQBrmvHc8PW26BaKEQ2Xjq6NwYsLdDPPCUDLiQSe3tifTo",
+      "explorerUrl": "https://explorer.solana.com/tx/3u2vSU22VHKqBFnFJgS2BJrm8z8xuceTJBX5ijcwoGfQBrmvHc8PW26BaKEQ2Xjq6NwYsLdDPPCUDLiQSe3tifTo?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "happy-client changed its spending caps",
+      "jobId": null,
+      "agentIds": ["7"],
+      "slot": 277,
+      "at": "2026-11-07T12:27:26.000Z",
+      "signature": "jxi6WamTgtGy9bhsEGU3XVc7LGJRmCCMbLE8e2To9fP5Hzw1vzGfQyWhZZEdpMRdczHjrhQpu6qQrSVd7UHiULf",
+      "explorerUrl": "https://explorer.solana.com/tx/jxi6WamTgtGy9bhsEGU3XVc7LGJRmCCMbLE8e2To9fP5Hzw1vzGfQyWhZZEdpMRdczHjrhQpu6qQrSVd7UHiULf?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "happy-client registered",
+      "jobId": null,
+      "agentIds": ["7"],
+      "slot": 277,
+      "at": "2026-11-07T12:27:26.000Z",
+      "signature": "jxi6WamTgtGy9bhsEGU3XVc7LGJRmCCMbLE8e2To9fP5Hzw1vzGfQyWhZZEdpMRdczHjrhQpu6qQrSVd7UHiULf",
+      "explorerUrl": "https://explorer.solana.com/tx/jxi6WamTgtGy9bhsEGU3XVc7LGJRmCCMbLE8e2To9fP5Hzw1vzGfQyWhZZEdpMRdczHjrhQpu6qQrSVd7UHiULf?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Funded",
+      "summary": "11 USDC staked on CheapResearch",
+      "jobId": null,
+      "agentIds": ["6"],
+      "slot": 272,
+      "at": "2026-11-07T12:27:24.000Z",
+      "signature": "3AprhS53ENvELAeR3cBPnwgSpMyzvRhVg3FGtiPb1KDzE1oexR8QGGrxZEHsNkoAEbrPgfKA6z26mGLKdwAGmRpQ",
+      "explorerUrl": "https://explorer.solana.com/tx/3AprhS53ENvELAeR3cBPnwgSpMyzvRhVg3FGtiPb1KDzE1oexR8QGGrxZEHsNkoAEbrPgfKA6z26mGLKdwAGmRpQ?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["6"],
+      "slot": 271,
+      "at": "2026-11-07T12:27:24.000Z",
+      "signature": "4s6FpQfjRuG9RqaHULY8yEcTmxmsXPntCY6rCKBqoi2bWncfGCUTdps9WCKW8yTLg7RFxGMb4LomroxEo4U8p8tP",
+      "explorerUrl": "https://explorer.solana.com/tx/4s6FpQfjRuG9RqaHULY8yEcTmxmsXPntCY6rCKBqoi2bWncfGCUTdps9WCKW8yTLg7RFxGMb4LomroxEo4U8p8tP?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "CheapResearch changed its spending caps",
+      "jobId": null,
+      "agentIds": ["6"],
+      "slot": 269,
+      "at": "2026-11-07T12:27:23.000Z",
+      "signature": "dTpZtoDXddv68XmgbxY9s71LUZ8aPEpVkLXnxUt4yL8d1ETyY9Z3ao3rqH1rrybuxUZmvYWiy7X6HPsmRLTTpHu",
+      "explorerUrl": "https://explorer.solana.com/tx/dTpZtoDXddv68XmgbxY9s71LUZ8aPEpVkLXnxUt4yL8d1ETyY9Z3ao3rqH1rrybuxUZmvYWiy7X6HPsmRLTTpHu?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "CheapResearch registered",
+      "jobId": null,
+      "agentIds": ["6"],
+      "slot": 269,
+      "at": "2026-11-07T12:27:23.000Z",
+      "signature": "dTpZtoDXddv68XmgbxY9s71LUZ8aPEpVkLXnxUt4yL8d1ETyY9Z3ao3rqH1rrybuxUZmvYWiy7X6HPsmRLTTpHu",
+      "explorerUrl": "https://explorer.solana.com/tx/dTpZtoDXddv68XmgbxY9s71LUZ8aPEpVkLXnxUt4yL8d1ETyY9Z3ao3rqH1rrybuxUZmvYWiy7X6HPsmRLTTpHu?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobRefunded",
+      "summary": "Job #4 refunded: 0.02 USDC back to orchestrator (declined)",
+      "jobId": "4",
+      "agentIds": ["4"],
+      "slot": 264,
+      "at": "2026-11-07T12:27:21.000Z",
+      "signature": "2UPs6VDTgGN5DpUU6n1GYr2SELFwmQC5ceCP93mwpXwauPLYnTZ4QjcWtoswd2WPK6SKnNqTyJFFCKxnhbQPBZfb",
+      "explorerUrl": "https://explorer.solana.com/tx/2UPs6VDTgGN5DpUU6n1GYr2SELFwmQC5ceCP93mwpXwauPLYnTZ4QjcWtoswd2WPK6SKnNqTyJFFCKxnhbQPBZfb?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobCreated",
+      "summary": "Job #4: orchestrator locked 0.02 USDC in escrow to hire FlakyResearch",
+      "jobId": "4",
+      "agentIds": ["4", "5"],
+      "slot": 263,
+      "at": "2026-11-07T12:27:21.000Z",
+      "signature": "CAZd569SveHQ7C77Z8CfrDzbmAaW1PFqUqcgeaQF3vDroebwwpNTTG2j8hvgt34Z9zpBkRLSV1KFhV9GgBRxSJC",
+      "explorerUrl": "https://explorer.solana.com/tx/CAZd569SveHQ7C77Z8CfrDzbmAaW1PFqUqcgeaQF3vDroebwwpNTTG2j8hvgt34Z9zpBkRLSV1KFhV9GgBRxSJC?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Funded",
+      "summary": "11 USDC staked on FlakyResearch",
+      "jobId": null,
+      "agentIds": ["5"],
+      "slot": 262,
+      "at": "2026-11-07T12:27:20.000Z",
+      "signature": "2eBghFR2QYeKvX83i81QZdoX4D64rRwB4xStspjP5umrpWwN8fqowXWgUygaws7F9NQ1UiPJrx5pLAtbbjq6y6fp",
+      "explorerUrl": "https://explorer.solana.com/tx/2eBghFR2QYeKvX83i81QZdoX4D64rRwB4xStspjP5umrpWwN8fqowXWgUygaws7F9NQ1UiPJrx5pLAtbbjq6y6fp?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["5"],
+      "slot": 261,
+      "at": "2026-11-07T12:27:20.000Z",
+      "signature": "2CsYxYphHPNLut2kUn5FPteunq8Ra5JEQFYkkkiDM9FkJUDFfGb3WVYyszgAjjA9mhak2TFpG7dSjJSjhvEwUKxL",
+      "explorerUrl": "https://explorer.solana.com/tx/2CsYxYphHPNLut2kUn5FPteunq8Ra5JEQFYkkkiDM9FkJUDFfGb3WVYyszgAjjA9mhak2TFpG7dSjJSjhvEwUKxL?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "FlakyResearch changed its spending caps",
+      "jobId": null,
+      "agentIds": ["5"],
+      "slot": 259,
+      "at": "2026-11-07T12:27:19.000Z",
+      "signature": "2CEcmrLuUFYJGM1FDcexvbNUwYS5XV19CX5BsM6to3QfSZfb9y9a8vTyJSzcqxitWYAS28LfDR5fT8jEqYv7dQkt",
+      "explorerUrl": "https://explorer.solana.com/tx/2CEcmrLuUFYJGM1FDcexvbNUwYS5XV19CX5BsM6to3QfSZfb9y9a8vTyJSzcqxitWYAS28LfDR5fT8jEqYv7dQkt?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "FlakyResearch registered",
+      "jobId": null,
+      "agentIds": ["5"],
+      "slot": 259,
+      "at": "2026-11-07T12:27:19.000Z",
+      "signature": "2CEcmrLuUFYJGM1FDcexvbNUwYS5XV19CX5BsM6to3QfSZfb9y9a8vTyJSzcqxitWYAS28LfDR5fT8jEqYv7dQkt",
+      "explorerUrl": "https://explorer.solana.com/tx/2CEcmrLuUFYJGM1FDcexvbNUwYS5XV19CX5BsM6to3QfSZfb9y9a8vTyJSzcqxitWYAS28LfDR5fT8jEqYv7dQkt?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #3: orchestrator reviewed 100/100 as client",
+      "jobId": "3",
+      "agentIds": ["4"],
+      "slot": 234,
+      "at": "2026-11-07T12:27:09.000Z",
+      "signature": "2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo",
+      "explorerUrl": "https://explorer.solana.com/tx/2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #3: MarketResearch reviewed 100/100 as worker",
+      "jobId": "3",
+      "agentIds": ["1"],
+      "slot": 234,
+      "at": "2026-11-07T12:27:09.000Z",
+      "signature": "2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo",
+      "explorerUrl": "https://explorer.solana.com/tx/2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobSettled",
+      "summary": "Job #3 settled: 0.0198 USDC paid to MarketResearch (Success)",
+      "jobId": "3",
+      "agentIds": ["1"],
+      "slot": 234,
+      "at": "2026-11-07T12:27:09.000Z",
+      "signature": "2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo",
+      "explorerUrl": "https://explorer.solana.com/tx/2nurr1wXPE7vjJy7vNhftoyDg5VqhmTzKxxcaDSyHyF3yp7B8UcNe7gUmTVbgv1Y1t4un4V5vUsiJNXXmrDmGpoo?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "ResultSubmitted",
+      "summary": "Job #3: result delivered; its hash is now on chain",
+      "jobId": "3",
+      "agentIds": [],
+      "slot": 219,
+      "at": "2026-11-07T12:27:03.000Z",
+      "signature": "4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be",
+      "explorerUrl": "https://explorer.solana.com/tx/4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobAccepted",
+      "summary": "Job #3 accepted by the worker",
+      "jobId": "3",
+      "agentIds": ["1"],
+      "slot": 219,
+      "at": "2026-11-07T12:27:03.000Z",
+      "signature": "4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be",
+      "explorerUrl": "https://explorer.solana.com/tx/4Tmj3BUbYNophfH6uxZg7etSRuookGFDvz3RBqzDVH4SqB58PtUYmByUVBtC9rt3T7oo4DETENDSrQYnmenUY3be?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobCreated",
+      "summary": "Job #3: orchestrator locked 0.02 USDC in escrow to hire MarketResearch",
+      "jobId": "3",
+      "agentIds": ["4", "1"],
+      "slot": 198,
+      "at": "2026-11-07T12:26:54.000Z",
+      "signature": "2d1wLBVPEhtMpPZ1XUhxauSmGgMf7maFwDiVcgQpfcdhVxyLh5vWgdz1sfB9J5q9RGNp6n4K2Fubv3SH5qSpwSiu",
+      "explorerUrl": "https://explorer.solana.com/tx/2d1wLBVPEhtMpPZ1XUhxauSmGgMf7maFwDiVcgQpfcdhVxyLh5vWgdz1sfB9J5q9RGNp6n4K2Fubv3SH5qSpwSiu?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #2: orchestrator reviewed 100/100 as client",
+      "jobId": "2",
+      "agentIds": ["4"],
+      "slot": 186,
+      "at": "2026-11-07T12:26:49.000Z",
+      "signature": "63cfhssjCUbuWDxHNQW8JVg4HGoTtpqdQz6oLxcUspoTTjsTkbR6MQLnqTjz8QEB8Qjf57a2qto1EAP1YqbwAGnw",
+      "explorerUrl": "https://explorer.solana.com/tx/63cfhssjCUbuWDxHNQW8JVg4HGoTtpqdQz6oLxcUspoTTjsTkbR6MQLnqTjz8QEB8Qjf57a2qto1EAP1YqbwAGnw?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #2: TradeAnalysis reviewed 100/100 as worker",
+      "jobId": "2",
+      "agentIds": ["2"],
+      "slot": 186,
+      "at": "2026-11-07T12:26:49.000Z",
+      "signature": "63cfhssjCUbuWDxHNQW8JVg4HGoTtpqdQz6oLxcUspoTTjsTkbR6MQLnqTjz8QEB8Qjf57a2qto1EAP1YqbwAGnw",
+      "explorerUrl": "https://explorer.solana.com/tx/63cfhssjCUbuWDxHNQW8JVg4HGoTtpqdQz6oLxcUspoTTjsTkbR6MQLnqTjz8QEB8Qjf57a2qto1EAP1YqbwAGnw?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobSettled",
+      "summary": "Job #2 settled: 0.0495 USDC paid to TradeAnalysis (Success)",
+      "jobId": "2",
+      "agentIds": ["2"],
+      "slot": 186,
+      "at": "2026-11-07T12:26:49.000Z",
+      "signature": "63cfhssjCUbuWDxHNQW8JVg4HGoTtpqdQz6oLxcUspoTTjsTkbR6MQLnqTjz8QEB8Qjf57a2qto1EAP1YqbwAGnw",
+      "explorerUrl": "https://explorer.solana.com/tx/63cfhssjCUbuWDxHNQW8JVg4HGoTtpqdQz6oLxcUspoTTjsTkbR6MQLnqTjz8QEB8Qjf57a2qto1EAP1YqbwAGnw?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "ResultSubmitted",
+      "summary": "Job #2: result delivered; its hash is now on chain",
+      "jobId": "2",
+      "agentIds": [],
+      "slot": 169,
+      "at": "2026-11-07T12:26:42.000Z",
+      "signature": "21UNdNppfhBWDWTNZCucVa9KuM2B2yB9nT5zuyWgZbwPqqdu8AFMeSAXBiWCa4kvi4Ho6dhS7orf6NtHHrMikuao",
+      "explorerUrl": "https://explorer.solana.com/tx/21UNdNppfhBWDWTNZCucVa9KuM2B2yB9nT5zuyWgZbwPqqdu8AFMeSAXBiWCa4kvi4Ho6dhS7orf6NtHHrMikuao?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobAccepted",
+      "summary": "Job #2 accepted by the worker",
+      "jobId": "2",
+      "agentIds": ["2"],
+      "slot": 169,
+      "at": "2026-11-07T12:26:42.000Z",
+      "signature": "21UNdNppfhBWDWTNZCucVa9KuM2B2yB9nT5zuyWgZbwPqqdu8AFMeSAXBiWCa4kvi4Ho6dhS7orf6NtHHrMikuao",
+      "explorerUrl": "https://explorer.solana.com/tx/21UNdNppfhBWDWTNZCucVa9KuM2B2yB9nT5zuyWgZbwPqqdu8AFMeSAXBiWCa4kvi4Ho6dhS7orf6NtHHrMikuao?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobCreated",
+      "summary": "Job #2: orchestrator locked 0.05 USDC in escrow to hire TradeAnalysis",
+      "jobId": "2",
+      "agentIds": ["4", "2"],
+      "slot": 148,
+      "at": "2026-11-07T12:26:34.000Z",
+      "signature": "4hqsF4457gZLvZVswXnLaQ1rwkWYMQdGwgY62ts2WH4arHyLX8yDmpTyAcEkFJzHwmuWUNFdN9UiJd9YCWz6c2d",
+      "explorerUrl": "https://explorer.solana.com/tx/4hqsF4457gZLvZVswXnLaQ1rwkWYMQdGwgY62ts2WH4arHyLX8yDmpTyAcEkFJzHwmuWUNFdN9UiJd9YCWz6c2d?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #1: orchestrator reviewed 100/100 as client",
+      "jobId": "1",
+      "agentIds": ["4"],
+      "slot": 141,
+      "at": "2026-11-07T12:26:31.000Z",
+      "signature": "3kVzedQVz2Snu97NRLMy1KPAKt3o8sFuBLyp8cDkgyZLCkfomDc9mQW27Hdr5hsLWd8eL4kxJP79bECfWTyPaXUh",
+      "explorerUrl": "https://explorer.solana.com/tx/3kVzedQVz2Snu97NRLMy1KPAKt3o8sFuBLyp8cDkgyZLCkfomDc9mQW27Hdr5hsLWd8eL4kxJP79bECfWTyPaXUh?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Review",
+      "summary": "Job #1: MarketResearch reviewed 100/100 as worker",
+      "jobId": "1",
+      "agentIds": ["1"],
+      "slot": 141,
+      "at": "2026-11-07T12:26:31.000Z",
+      "signature": "3kVzedQVz2Snu97NRLMy1KPAKt3o8sFuBLyp8cDkgyZLCkfomDc9mQW27Hdr5hsLWd8eL4kxJP79bECfWTyPaXUh",
+      "explorerUrl": "https://explorer.solana.com/tx/3kVzedQVz2Snu97NRLMy1KPAKt3o8sFuBLyp8cDkgyZLCkfomDc9mQW27Hdr5hsLWd8eL4kxJP79bECfWTyPaXUh?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobSettled",
+      "summary": "Job #1 settled: 0.0198 USDC paid to MarketResearch (Success)",
+      "jobId": "1",
+      "agentIds": ["1"],
+      "slot": 141,
+      "at": "2026-11-07T12:26:31.000Z",
+      "signature": "3kVzedQVz2Snu97NRLMy1KPAKt3o8sFuBLyp8cDkgyZLCkfomDc9mQW27Hdr5hsLWd8eL4kxJP79bECfWTyPaXUh",
+      "explorerUrl": "https://explorer.solana.com/tx/3kVzedQVz2Snu97NRLMy1KPAKt3o8sFuBLyp8cDkgyZLCkfomDc9mQW27Hdr5hsLWd8eL4kxJP79bECfWTyPaXUh?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "ResultSubmitted",
+      "summary": "Job #1: result delivered; its hash is now on chain",
+      "jobId": "1",
+      "agentIds": [],
+      "slot": 121,
+      "at": "2026-11-07T12:26:23.000Z",
+      "signature": "shhQyEwCG3Wbq2hpb4BUGTb7tmyfTnTi59GrCAPmWmpCbwj7sMcEaVba5mGfDznfxitvqcPPqPdoDiXqXR7UrmU",
+      "explorerUrl": "https://explorer.solana.com/tx/shhQyEwCG3Wbq2hpb4BUGTb7tmyfTnTi59GrCAPmWmpCbwj7sMcEaVba5mGfDznfxitvqcPPqPdoDiXqXR7UrmU?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobAccepted",
+      "summary": "Job #1 accepted by the worker",
+      "jobId": "1",
+      "agentIds": ["1"],
+      "slot": 121,
+      "at": "2026-11-07T12:26:23.000Z",
+      "signature": "shhQyEwCG3Wbq2hpb4BUGTb7tmyfTnTi59GrCAPmWmpCbwj7sMcEaVba5mGfDznfxitvqcPPqPdoDiXqXR7UrmU",
+      "explorerUrl": "https://explorer.solana.com/tx/shhQyEwCG3Wbq2hpb4BUGTb7tmyfTnTi59GrCAPmWmpCbwj7sMcEaVba5mGfDznfxitvqcPPqPdoDiXqXR7UrmU?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "JobCreated",
+      "summary": "Job #1: orchestrator locked 0.02 USDC in escrow to hire MarketResearch",
+      "jobId": "1",
+      "agentIds": ["4", "1"],
+      "slot": 100,
+      "at": "2026-11-07T12:26:14.000Z",
+      "signature": "whkeotdY4cqVun6Byb4BSgagWLGN5WcdcVJg4337koKSpMrSL3nqT6H7vZPF5HAkZ173QyfgnGJb79yFifLAbMX",
+      "explorerUrl": "https://explorer.solana.com/tx/whkeotdY4cqVun6Byb4BSgagWLGN5WcdcVJg4337koKSpMrSL3nqT6H7vZPF5HAkZ173QyfgnGJb79yFifLAbMX?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Funded",
+      "summary": "2 USDC added to the purse of orchestrator",
+      "jobId": null,
+      "agentIds": ["4"],
+      "slot": 67,
+      "at": "2026-11-07T12:26:01.000Z",
+      "signature": "32SUfnCNp524xh7e7WCAmpUbvcRugyLvRBS4UAX8hhsAPwcLREJFY6BbCga13Qd4Qmn1qYWTApuAC915WRZZKmRT",
+      "explorerUrl": "https://explorer.solana.com/tx/32SUfnCNp524xh7e7WCAmpUbvcRugyLvRBS4UAX8hhsAPwcLREJFY6BbCga13Qd4Qmn1qYWTApuAC915WRZZKmRT?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["4"],
+      "slot": 66,
+      "at": "2026-11-07T12:26:01.000Z",
+      "signature": "4EF8XLiVxU1aHfJMynCut4eYD7uBZmrhHkM5RbK16T7sMoWo1DgFgTVJagGk7QGwisL5ngQDvwA25AqCtgrKCx7t",
+      "explorerUrl": "https://explorer.solana.com/tx/4EF8XLiVxU1aHfJMynCut4eYD7uBZmrhHkM5RbK16T7sMoWo1DgFgTVJagGk7QGwisL5ngQDvwA25AqCtgrKCx7t?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "orchestrator changed its spending caps",
+      "jobId": null,
+      "agentIds": ["4"],
+      "slot": 64,
+      "at": "2026-11-07T12:26:00.000Z",
+      "signature": "3ni59SEGfJeuEnKXcbi5mdrFx9XPtWiQ1eyjQf41j39DtkXhtwFGV3ZeSAqSpdy9F4ChZbtDZYN9cB4g85hMYUMR",
+      "explorerUrl": "https://explorer.solana.com/tx/3ni59SEGfJeuEnKXcbi5mdrFx9XPtWiQ1eyjQf41j39DtkXhtwFGV3ZeSAqSpdy9F4ChZbtDZYN9cB4g85hMYUMR?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "orchestrator registered",
+      "jobId": null,
+      "agentIds": ["4"],
+      "slot": 64,
+      "at": "2026-11-07T12:26:00.000Z",
+      "signature": "3ni59SEGfJeuEnKXcbi5mdrFx9XPtWiQ1eyjQf41j39DtkXhtwFGV3ZeSAqSpdy9F4ChZbtDZYN9cB4g85hMYUMR",
+      "explorerUrl": "https://explorer.solana.com/tx/3ni59SEGfJeuEnKXcbi5mdrFx9XPtWiQ1eyjQf41j39DtkXhtwFGV3ZeSAqSpdy9F4ChZbtDZYN9cB4g85hMYUMR?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Funded",
+      "summary": "11 USDC staked on TradeExecution",
+      "jobId": null,
+      "agentIds": ["3"],
+      "slot": 59,
+      "at": "2026-11-07T12:25:58.000Z",
+      "signature": "2u2QrcCjxcqhqUvFVJjy9nSccT9atHNMYM7o2T5JhxDA6RhmTAGgsWLgVkZ8GyQWkpT59FF7tHWyZD2t8fqEKGZ9",
+      "explorerUrl": "https://explorer.solana.com/tx/2u2QrcCjxcqhqUvFVJjy9nSccT9atHNMYM7o2T5JhxDA6RhmTAGgsWLgVkZ8GyQWkpT59FF7tHWyZD2t8fqEKGZ9?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["3"],
+      "slot": 58,
+      "at": "2026-11-07T12:25:57.000Z",
+      "signature": "5W6sHCmYi2vQTqYGrGxwzmdUjGrBQansbZNibDns4pypgJTkvQ29j1N9VXHmwPPVibqzSYKEbPPx1fPFQ5Qh4dAV",
+      "explorerUrl": "https://explorer.solana.com/tx/5W6sHCmYi2vQTqYGrGxwzmdUjGrBQansbZNibDns4pypgJTkvQ29j1N9VXHmwPPVibqzSYKEbPPx1fPFQ5Qh4dAV?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "TradeExecution changed its spending caps",
+      "jobId": null,
+      "agentIds": ["3"],
+      "slot": 57,
+      "at": "2026-11-07T12:25:57.000Z",
+      "signature": "2qF6FcY6rrEbotw3pYJN2BRv9f94ChhgKYpf7kQjUqKQdTM2gjGrUsTFwT7U9hYPD53EGXdfGvhWLrs4u4RCE8sz",
+      "explorerUrl": "https://explorer.solana.com/tx/2qF6FcY6rrEbotw3pYJN2BRv9f94ChhgKYpf7kQjUqKQdTM2gjGrUsTFwT7U9hYPD53EGXdfGvhWLrs4u4RCE8sz?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "TradeExecution registered",
+      "jobId": null,
+      "agentIds": ["3"],
+      "slot": 57,
+      "at": "2026-11-07T12:25:57.000Z",
+      "signature": "2qF6FcY6rrEbotw3pYJN2BRv9f94ChhgKYpf7kQjUqKQdTM2gjGrUsTFwT7U9hYPD53EGXdfGvhWLrs4u4RCE8sz",
+      "explorerUrl": "https://explorer.solana.com/tx/2qF6FcY6rrEbotw3pYJN2BRv9f94ChhgKYpf7kQjUqKQdTM2gjGrUsTFwT7U9hYPD53EGXdfGvhWLrs4u4RCE8sz?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Funded",
+      "summary": "11 USDC staked on TradeAnalysis",
+      "jobId": null,
+      "agentIds": ["2"],
+      "slot": 52,
+      "at": "2026-11-07T12:25:55.000Z",
+      "signature": "4EU4j5N86TcAB7VnEV4yBRvHhyETmqKUaxRrMnY5MfT3dUaP1x1ovDM5XscczvwygAawNLaekhgAtLGFNj9vbYzX",
+      "explorerUrl": "https://explorer.solana.com/tx/4EU4j5N86TcAB7VnEV4yBRvHhyETmqKUaxRrMnY5MfT3dUaP1x1ovDM5XscczvwygAawNLaekhgAtLGFNj9vbYzX?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["2"],
+      "slot": 51,
+      "at": "2026-11-07T12:25:55.000Z",
+      "signature": "2dhJDd1rSaR4A5iUfowtE51mrCXwQTbEJrvnSZBwhAv4AfezBpHL2ap6nVW1McifvvduT9dqiMj2qm3hqqi79dpB",
+      "explorerUrl": "https://explorer.solana.com/tx/2dhJDd1rSaR4A5iUfowtE51mrCXwQTbEJrvnSZBwhAv4AfezBpHL2ap6nVW1McifvvduT9dqiMj2qm3hqqi79dpB?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "TradeAnalysis changed its spending caps",
+      "jobId": null,
+      "agentIds": ["2"],
+      "slot": 50,
+      "at": "2026-11-07T12:25:54.000Z",
+      "signature": "5DtLLyT7GAZLPPreiZfeKLmKsoWaRY6KMeJJLiz8PrhcqNhGRNPgbbApVRH175uWFPX51vsWaHmowsFLdXAamfaX",
+      "explorerUrl": "https://explorer.solana.com/tx/5DtLLyT7GAZLPPreiZfeKLmKsoWaRY6KMeJJLiz8PrhcqNhGRNPgbbApVRH175uWFPX51vsWaHmowsFLdXAamfaX?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "TradeAnalysis registered",
+      "jobId": null,
+      "agentIds": ["2"],
+      "slot": 50,
+      "at": "2026-11-07T12:25:54.000Z",
+      "signature": "5DtLLyT7GAZLPPreiZfeKLmKsoWaRY6KMeJJLiz8PrhcqNhGRNPgbbApVRH175uWFPX51vsWaHmowsFLdXAamfaX",
+      "explorerUrl": "https://explorer.solana.com/tx/5DtLLyT7GAZLPPreiZfeKLmKsoWaRY6KMeJJLiz8PrhcqNhGRNPgbbApVRH175uWFPX51vsWaHmowsFLdXAamfaX?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "Funded",
+      "summary": "11 USDC staked on MarketResearch",
+      "jobId": null,
+      "agentIds": ["1"],
+      "slot": 44,
+      "at": "2026-11-07T12:25:52.000Z",
+      "signature": "3sjQiqcbsoyTq99VTb2a5d16xdLfHGFPUqi72ndde8NSxsGNDB1R1TRbSMBqWBtnwpmzvGyWxuqyPe47D2tpLszE",
+      "explorerUrl": "https://explorer.solana.com/tx/3sjQiqcbsoyTq99VTb2a5d16xdLfHGFPUqi72ndde8NSxsGNDB1R1TRbSMBqWBtnwpmzvGyWxuqyPe47D2tpLszE?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "WalletAccepted",
+      "summary": "Wallet Accepted",
+      "jobId": null,
+      "agentIds": ["1"],
+      "slot": 42,
+      "at": "2026-11-07T12:25:51.000Z",
+      "signature": "yV49p2w6pcTY4xNgdBY9YriR8w252Chn2RA8vs2gQtNa7Ykb6BwChtfsqqJ7UF758NMv8HQw42xVMV81FkEa6ut",
+      "explorerUrl": "https://explorer.solana.com/tx/yV49p2w6pcTY4xNgdBY9YriR8w252Chn2RA8vs2gQtNa7Ykb6BwChtfsqqJ7UF758NMv8HQw42xVMV81FkEa6ut?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "CapsSet",
+      "summary": "MarketResearch changed its spending caps",
+      "jobId": null,
+      "agentIds": ["1"],
+      "slot": 40,
+      "at": "2026-11-07T12:25:50.000Z",
+      "signature": "5ahBmLaCHa4h3vsRThxS8fyUzmEn26PNv7JJhUNz82r617mnpG9S2PzNS4RxPPjYtvJ2GwkDuL8WeVma2x5HemUk",
+      "explorerUrl": "https://explorer.solana.com/tx/5ahBmLaCHa4h3vsRThxS8fyUzmEn26PNv7JJhUNz82r617mnpG9S2PzNS4RxPPjYtvJ2GwkDuL8WeVma2x5HemUk?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    },
+    {
+      "kind": "AgentRegistered",
+      "summary": "MarketResearch registered",
+      "jobId": null,
+      "agentIds": ["1"],
+      "slot": 40,
+      "at": "2026-11-07T12:25:50.000Z",
+      "signature": "5ahBmLaCHa4h3vsRThxS8fyUzmEn26PNv7JJhUNz82r617mnpG9S2PzNS4RxPPjYtvJ2GwkDuL8WeVma2x5HemUk",
+      "explorerUrl": "https://explorer.solana.com/tx/5ahBmLaCHa4h3vsRThxS8fyUzmEn26PNv7JJhUNz82r617mnpG9S2PzNS4RxPPjYtvJ2GwkDuL8WeVma2x5HemUk?cluster=custom&customUrl=http%3A%2F%2F127.0.0.1%3A8899"
+    }
+  ],
+  "complete": true
+}
