@@ -81,6 +81,13 @@ test('the farm agent is read as self-funded, from the chain alone', async ({page
   await expect(page.getByRole('link', {name: 'Job #5'})).toHaveAttribute('href', '/jobs/5');
 });
 
+test('/jobs, which the docs link to, lands on the activity feed that lists the jobs', async ({page}) => {
+  const res = await page.goto('/jobs');
+  expect(res?.status()).toBe(200);
+  await expect(page).toHaveURL(/\/activity$/);
+  await expect(page.getByRole('link', {name: 'Job #5'}).first()).toBeVisible();
+});
+
 test('a settled job shows every escrow step with a transaction link and the result hash', async ({page}) => {
   await page.goto('/jobs/1');
   const main = page.locator('main');

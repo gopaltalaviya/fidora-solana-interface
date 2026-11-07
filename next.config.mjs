@@ -31,6 +31,11 @@ export default function config(phase) {
     reactStrictMode: true,
     poweredByHeader: false,
     ...(api ? {env: {NEXT_PUBLIC_API_URL: api}} : {}),
+    // The jobs are listed on the activity feed; each has its own page at
+    // /jobs/<id>. The docs (and links people share) say /jobs.
+    async redirects() {
+      return [{source: '/jobs', destination: '/activity', permanent: false}];
+    },
     async headers() {
       return [
         {
