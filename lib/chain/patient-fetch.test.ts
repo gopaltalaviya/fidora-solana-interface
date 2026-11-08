@@ -12,6 +12,7 @@ const json = (body: unknown, status = 200) => new Response(JSON.stringify(body),
 describe('patientFetch', () => {
   afterEach(() => {
     vi.unstubAllGlobals();
+    vi.restoreAllMocks();
     vi.useRealTimers();
   });
 
@@ -94,11 +95,13 @@ describe('patientFetch', () => {
 describe('makePatientFetch({maxWaitMs})', () => {
   afterEach(() => {
     vi.unstubAllGlobals();
+    vi.restoreAllMocks();
     vi.useRealTimers();
   });
 
   it('hands the 429 back once the next wait would pass the bound, so a page answers in time', async () => {
     vi.useFakeTimers();
+    vi.spyOn(Math, 'random').mockReturnValue(0); // no jitter: 1+2+4 s must fit in 8 s exactly, every run
     const f = vi.fn().mockImplementation(async () => new Response('{}', {status: 429}));
     vi.stubGlobal('fetch', f);
     const res = makePatientFetch({maxWaitMs: 8_000})('https://api.devnet.solana.com');
