@@ -13,6 +13,7 @@ import 'server-only';
 import {AnchorProvider, BN, BorshCoder, EventParser, Program} from '@anchor-lang/core';
 import {Connection, PublicKey} from '@solana/web3.js';
 import IDL from './idl.json';
+import {patientFetch} from './patient-fetch';
 
 export const PROGRAM_ID = new PublicKey(IDL.address);
 const coder = new BorshCoder(IDL as never);
@@ -62,7 +63,10 @@ async function openCluster(env: NodeJS.ProcessEnv): Promise<ClusterInfo> {
   const name = clusterName(env);
   const rpcUrl = env['FIDORA_RPC_URL'] || DEFAULT_RPC[name];
   if (/mainnet/i.test(rpcUrl)) throw new Error('refusing a mainnet RPC');
-  const connection = new Connection(rpcUrl, 'confirmed');
+  const connection =
+    name === 'localnet'
+      ? new Connection(rpcUrl, 'confirmed')
+      : new Connection(rpcUrl, {commitment: 'confirmed', fetch: patientFetch, disableRetryOnRateLimit: true});
   const network = `solana:${(await connection.getGenesisHash()).slice(0, 32)}`;
   if (REFUSED[network])
     throw new Error(`refusing Solana ${REFUSED[network]}: Fidora runs on localnet and devnet only`);
@@ -409,8 +413,11 @@ export function readEvents(): Promise<{events: ChainEvent[]; complete: boolean}>
     sigs.sort((a, b) => a.slot - b.slot);
     const parser = new EventParser(PROGRAM_ID, coder);
     const events: ChainEvent[] = [];
-    for (let i = 0; i < sigs.length; i += 50) {
-      const batch = sigs.slice(i, i + 50);
+    // The public devnet endpoint refuses a getTransactions batch of 10 or
+    // more outright (every item 429, measured 2026-11-08); 5 passes.
+    const size = c.name === 'localnet' ? 50 : 5;
+    for (let i = 0; i < sigs.length; i += size) {
+      const batch = sigs.slice(i, i + size);
       const txs = await c.connection.getTransactions(
         batch.map((x) => x.signature),
         {commitment: 'confirmed', maxSupportedTransactionVersion: 0},

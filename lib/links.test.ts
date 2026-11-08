@@ -19,9 +19,9 @@ describe('safeHref', () => {
     );
     expect(
       safeHref(
-        'https://explorer.solana.com/address/VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku?cluster=devnet',
+        'https://explorer.solana.com/address/5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg?cluster=devnet',
       ),
-    ).toBe('https://explorer.solana.com/address/VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku?cluster=devnet');
+    ).toBe('https://explorer.solana.com/address/5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg?cluster=devnet');
   });
 
   it('no longer admits the Monad explorers', () => {

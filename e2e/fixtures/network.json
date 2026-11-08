@@ -4,14 +4,14 @@
   "name": "Solana localnet",
   "shortName": "localnet",
   "testnet": true,
-  "programId": "VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku",
+  "programId": "5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg",
   "paymentToken": {
     "symbol": "USDC",
     "decimals": 6,
     "accountId": "PQyS4Lkp7FRqEWE9g1KeqyABdkDuCya546wEb8efe21"
   },
   "contracts": {
-    "Fidora": "VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku",
+    "Fidora": "5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg",
     "PaymentToken": "PQyS4Lkp7FRqEWE9g1KeqyABdkDuCya546wEb8efe21",
     "Arbiter": "7mn2JcaDHjttmQ2rNFswTxzRD7jtgLPBndxznzv3RPup"
   },

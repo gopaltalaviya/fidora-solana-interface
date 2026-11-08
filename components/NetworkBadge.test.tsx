@@ -20,7 +20,7 @@ const network = (testnet: boolean) => ({
   name: testnet ? 'Solana devnet' : 'Solana',
   testnet,
   contracts: {
-    Fidora: 'VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku',
+    Fidora: '5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg',
     PaymentToken: 'mint',
     Arbiter: 'arbiter',
   },
@@ -51,7 +51,7 @@ describe('NetworkBadge', () => {
     serve(network(true));
     render(<NetworkBadge />);
     expect((await screen.findByText(/Solana devnet/)).parentElement?.getAttribute('title')).toBe(
-      'VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku',
+      '5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg',
     );
   });
 

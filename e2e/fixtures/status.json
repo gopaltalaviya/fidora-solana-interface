@@ -5,7 +5,7 @@
   "cluster": "localnet",
   "rpc": "up",
   "slot": 2499,
-  "programId": "VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku",
+  "programId": "5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg",
   "paused": false,
   "invariant": {"holds": true, "owed": "69000000", "vault": "69000000"},
   "counts": {"agents": 8, "jobs": 5, "openJobs": 0},

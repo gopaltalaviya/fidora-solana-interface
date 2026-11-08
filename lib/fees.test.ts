@@ -7,10 +7,10 @@ const base: NetworkInfo = {
   cluster: 'devnet',
   name: 'Solana devnet',
   testnet: true,
-  programId: 'VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku',
+  programId: '5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg',
   paymentToken: {symbol: 'USDC', decimals: 6, accountId: null},
   contracts: {
-    Fidora: 'VkxrZbgyAXRn5mAAy5SscctDRmMp2AVsmvmsiPD5Uku',
+    Fidora: '5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg',
     PaymentToken: 'mint',
     Arbiter: 'arbiter',
   },

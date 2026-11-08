@@ -44,8 +44,9 @@ and the farmed agent's trust verdict (`self-funded` → block) on its agent page
 FIDORA_CLUSTER=devnet pnpm dev
 ```
 
-The program's devnet deployment is pending devnet SOL; until it is initialized there, the pages say the
-program cannot be read.
+The program is deployed and initialized on devnet at `5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg`. The public
+devnet RPC rate-limits bursts and refuses `getTransaction` batches of 10 or more, so on devnet the event scan
+reads 5 at a time and waits out a 429 (`lib/chain/patient-fetch.ts`); a private RPC in `FIDORA_RPC_URL` is faster.
 
 ## Configuration
 
