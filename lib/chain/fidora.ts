@@ -13,7 +13,7 @@ import 'server-only';
 import {AnchorProvider, BN, BorshCoder, EventParser, Program} from '@anchor-lang/core';
 import {Connection, PublicKey} from '@solana/web3.js';
 import IDL from './idl.json';
-import {patientFetch} from './patient-fetch';
+import {makePatientFetch} from './patient-fetch';
 
 export const PROGRAM_ID = new PublicKey(IDL.address);
 const coder = new BorshCoder(IDL as never);
@@ -66,7 +66,12 @@ async function openCluster(env: NodeJS.ProcessEnv): Promise<ClusterInfo> {
   const connection =
     name === 'localnet'
       ? new Connection(rpcUrl, 'confirmed')
-      : new Connection(rpcUrl, {commitment: 'confirmed', fetch: patientFetch, disableRetryOnRateLimit: true});
+      : new Connection(rpcUrl, {
+          commitment: 'confirmed',
+          // Bounded: a page request must answer inside a serverless time limit.
+          fetch: makePatientFetch({maxWaitMs: 8_000}),
+          disableRetryOnRateLimit: true,
+        });
   const network = `solana:${(await connection.getGenesisHash()).slice(0, 32)}`;
   if (REFUSED[network])
     throw new Error(`refusing Solana ${REFUSED[network]}: Fidora runs on localnet and devnet only`);
@@ -380,13 +385,26 @@ function flat(v: unknown): string {
 }
 
 /**
+ * How long one page request may spend reading transactions, on a public
+ * cluster. The public devnet RPC lets ~10 getTransaction calls through and
+ * then 429s (measured 2026-11-08), and a serverless request has a time
+ * limit: past this budget the scan answers with what it has, marked
+ * incomplete, and the next request carries on from there (`parsed`).
+ */
+export const SCAN_BUDGET_MS = Number(process.env['FIDORA_SCAN_BUDGET_MS'] ?? 20_000);
+
+/** Parsed events per transaction signature. A confirmed transaction never changes, so each is read once per process. */
+const parsed = new Map<string, Omit<ChainEvent, 'signature' | 'slot' | 'blockTime'>[]>();
+
+/**
  * Every Fidora event since the start slot, oldest first. `complete` is false
- * when the transaction bound was hit first: a partial history must never be
- * read as a clean record (the trust verdict blocks on it).
+ * when the transaction bound or the time budget was hit first: a partial
+ * history must never be read as a clean record (the trust verdict blocks on it).
  */
 export function readEvents(): Promise<{events: ChainEvent[]; complete: boolean}> {
   return cachedRead('events', async () => {
     const c = await cluster();
+    const started = Date.now();
     const sigs: {signature: string; slot: number; blockTime: number | null}[] = [];
     let before: string | undefined;
     let complete = false;
@@ -412,25 +430,49 @@ export function readEvents(): Promise<{events: ChainEvent[]; complete: boolean}>
     }
     sigs.sort((a, b) => a.slot - b.slot);
     const parser = new EventParser(PROGRAM_ID, coder);
-    const events: ChainEvent[] = [];
-    // The public devnet endpoint refuses a getTransactions batch of 10 or
-    // more outright (every item 429, measured 2026-11-08); 5 passes.
-    const size = c.name === 'localnet' ? 50 : 5;
-    for (let i = 0; i < sigs.length; i += size) {
-      const batch = sigs.slice(i, i + size);
-      const txs = await c.connection.getTransactions(
-        batch.map((x) => x.signature),
-        {commitment: 'confirmed', maxSupportedTransactionVersion: 0},
-      );
-      txs.forEach((t, j) => {
-        const meta = batch[j]!;
-        for (const e of parser.parseLogs(t?.meta?.logMessages ?? [])) {
-          const data: Record<string, string> = {};
-          for (const [k, v] of Object.entries(e.data as Record<string, unknown>)) data[camel(k)] = flat(v);
-          events.push({name: e.name.replace(/^./, (m) => m.toUpperCase()), data, ...meta});
+    const parse = (logs: string[]) => {
+      const out: {name: string; data: Record<string, string>}[] = [];
+      for (const e of parser.parseLogs(logs)) {
+        const data: Record<string, string> = {};
+        for (const [k, v] of Object.entries(e.data as Record<string, unknown>)) data[camel(k)] = flat(v);
+        out.push({name: e.name.replace(/^./, (m) => m.toUpperCase()), data});
+      }
+      return out;
+    };
+    const todo = sigs.filter((x) => !parsed.has(x.signature));
+    const opts = {commitment: 'confirmed', maxSupportedTransactionVersion: 0} as const;
+    try {
+      if (c.name === 'localnet') {
+        for (let i = 0; i < todo.length; i += 50) {
+          const batch = todo.slice(i, i + 50);
+          const txs = await c.connection.getTransactions(
+            batch.map((x) => x.signature),
+            opts,
+          );
+          // A transaction the node cannot return yet (null) is read again next time.
+          txs.forEach((t, j) => t && parsed.set(batch[j]!.signature, parse(t.meta?.logMessages ?? [])));
         }
-      });
+      } else {
+        // The public devnet RPC refuses batched getTransaction calls; one at a time, within the budget.
+        for (const x of todo) {
+          if (Date.now() - started > SCAN_BUDGET_MS) break;
+          const t = await c.connection.getTransaction(x.signature, opts);
+          if (t) parsed.set(x.signature, parse(t.meta?.logMessages ?? []));
+        }
+      }
+    } catch {
+      // Rate-limited past what one request can wait: answer with what is read; the next request continues.
     }
-    return {events, complete};
+    const events: ChainEvent[] = [];
+    let missing = 0;
+    for (const x of sigs) {
+      const evs = parsed.get(x.signature);
+      if (!evs) {
+        missing++;
+        continue;
+      }
+      for (const e of evs) events.push({...e, ...x});
+    }
+    return {events, complete: complete && missing === 0};
   });
 }

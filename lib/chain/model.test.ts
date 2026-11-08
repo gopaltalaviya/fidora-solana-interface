@@ -202,7 +202,7 @@ describe('trustAll: the farm the demo builds', () => {
       '7',
     )!;
     expect(t.action).toBe('block');
-    expect(t.reasons[0]).toMatch(/only the newest 2000/);
+    expect(t.reasons[0]).toMatch(/not fully read yet.*newest 2000 transactions.*no agent is cleared/);
   });
 });
 

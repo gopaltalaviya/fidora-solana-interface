@@ -4,7 +4,7 @@
  * nothing else is retried, and the wait always ends.
  */
 import {afterEach, describe, expect, it, vi} from 'vitest';
-import {patientFetch} from './patient-fetch';
+import {makePatientFetch, patientFetch} from './patient-fetch';
 
 const U = 'https://api.devnet.solana.com';
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), {status});
@@ -88,5 +88,23 @@ describe('patientFetch', () => {
     await vi.runAllTimersAsync();
     expect((await res).status).toBe(429);
     expect(f).toHaveBeenCalledTimes(13);
+  });
+});
+
+describe('makePatientFetch({maxWaitMs})', () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    vi.useRealTimers();
+  });
+
+  it('hands the 429 back once the next wait would pass the bound, so a page answers in time', async () => {
+    vi.useFakeTimers();
+    const f = vi.fn().mockImplementation(async () => new Response('{}', {status: 429}));
+    vi.stubGlobal('fetch', f);
+    const res = makePatientFetch({maxWaitMs: 8_000})('https://api.devnet.solana.com');
+    await vi.runAllTimersAsync();
+    expect((await res).status).toBe(429);
+    // waits of ~1, 2, 4 s fit in 8 s; the next (~8 s) does not
+    expect(f).toHaveBeenCalledTimes(4);
   });
 });

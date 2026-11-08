@@ -46,19 +46,20 @@ FIDORA_CLUSTER=devnet pnpm dev
 
 The program is deployed and initialized on devnet at `5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg`. The public
 devnet RPC rate-limits bursts and refuses `getTransaction` batches of 10 or more, so on devnet the event scan
-reads 5 at a time and waits out a 429 (`lib/chain/patient-fetch.ts`); a private RPC in `FIDORA_RPC_URL` is faster.
+reads one transaction at a time within `FIDORA_SCAN_BUDGET_MS`, keeps what it read, and continues on the next request (`lib/chain/patient-fetch.ts`). With the public RPC the history fills in over a few page loads; a private devnet RPC in `FIDORA_RPC_URL` (Helius, Alchemy, QuickNode free plans) reads it at once.
 
 ## Configuration
 
 All server-side; none of them is a secret, and none is sent to the browser.
 
-| Variable                  | Default                                                   | Purpose                                                                                                                         |
-| ------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `FIDORA_CLUSTER`          | `devnet`                                                  | `localnet` or `devnet`. Anything else, mainnet included, fails.                                                                 |
-| `FIDORA_RPC_URL`          | `http://127.0.0.1:8899` (localnet), the public devnet RPC | The RPC the server reads. Its genesis hash must match the cluster.                                                              |
-| `FIDORA_START_SLOT`       | `0`                                                       | Ignore program events before this slot (an older deployment).                                                                   |
-| `FIDORA_CACHE_MS`         | `15000`                                                   | How long each chain read is cached per server process.                                                                          |
-| `FIDORA_MAX_TRANSACTIONS` | `2000`                                                    | The most program transactions the event scan reads. A scan that hits it is reported incomplete, and every trust reading blocks. |
+| Variable                  | Default                                                   | Purpose                                                                                                                                                                               |
+| ------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `FIDORA_CLUSTER`          | `devnet`                                                  | `localnet` or `devnet`. Anything else, mainnet included, fails.                                                                                                                       |
+| `FIDORA_RPC_URL`          | `http://127.0.0.1:8899` (localnet), the public devnet RPC | The RPC the server reads. Its genesis hash must match the cluster.                                                                                                                    |
+| `FIDORA_START_SLOT`       | `0`                                                       | Ignore program events before this slot (an older deployment).                                                                                                                         |
+| `FIDORA_CACHE_MS`         | `15000`                                                   | How long each chain read is cached per server process.                                                                                                                                |
+| `FIDORA_MAX_TRANSACTIONS` | `2000`                                                    | The most program transactions the event scan reads. A scan that hits it is reported incomplete, and every trust reading blocks.                                                       |
+| `FIDORA_SCAN_BUDGET_MS`   | `20000`                                                   | On devnet: the time one request may spend reading transactions. Past it the scan answers with what it has, marked incomplete (trust readings block), and the next request carries on. |
 
 `.env.example` lists them. Optional public values, compiled into the client bundle: `NEXT_PUBLIC_SITE_URL`
 (absolute Open Graph and canonical links), `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_X_HANDLE` and

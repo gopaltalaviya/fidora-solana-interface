@@ -346,7 +346,7 @@ export function trustAll(
             ...reading,
             action: 'block',
             reasons: [
-              `only the newest ${ctx.maxTransactions} program transactions could be read, so this record may be missing evidence; no agent is cleared on partial evidence`,
+              `the program history is not fully read yet (it stops at the newest ${ctx.maxTransactions} transactions, and a rate-limited RPC is read over several requests), so this record may be missing evidence; no agent is cleared on partial evidence`,
               ...reading.reasons,
             ],
           },
