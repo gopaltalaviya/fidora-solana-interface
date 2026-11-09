@@ -420,15 +420,22 @@ export function readJobEvents(address: string): Promise<ChainEvent[]> {
     ).filter((x) => !x.err);
     const opts = {commitment: 'confirmed', maxSupportedTransactionVersion: 0} as const;
     const events: ChainEvent[] = [];
+    let partial = false;
     for (const x of sigs.reverse()) {
       if (!parsed.has(x.signature)) {
-        const t = await c.connection.getTransaction(x.signature, opts);
-        if (!t) continue;
+        const t = await c.connection.getTransaction(x.signature, opts).catch(() => null);
+        if (!t) {
+          partial = true;
+          continue;
+        }
         parsed.set(x.signature, parseLogs(t.meta?.logMessages ?? []));
       }
       for (const e of parsed.get(x.signature)!)
         events.push({...e, signature: x.signature, slot: x.slot, blockTime: x.blockTime ?? null});
     }
+    // A rate-limited read is not kept: the next request reads the missing transactions again.
+    if (partial) memo.delete(`job-events:${address}`);
+    if (partial && events.length === 0) throw new Error(`job ${address}: transactions not readable yet`);
     return events;
   });
 }

@@ -139,15 +139,12 @@ export async function jobs(q: {agent?: string | undefined; limit?: number | unde
 
 export async function job(id: string) {
   const c = await upstream(cluster());
-  const [list, scan, n] = await Promise.all([upstream(readJobs()), upstream(readEvents()), names()]);
+  const [list, n] = await Promise.all([upstream(readJobs()), names()]);
   const j = list.find((x) => x.id === id);
   if (!j) throw new NotFound(`no job ${id}`);
-  // The job's own transactions, merged with the program-wide scan (which may be partial).
-  const own = await readJobEvents(j.address).catch(() => []);
-  const seen = new Set(scan.events.map((e) => `${e.signature}:${e.name}`));
-  const events = [...scan.events, ...own.filter((e) => !seen.has(`${e.signature}:${e.name}`))].sort(
-    (a, b) => a.slot - b.slot,
-  );
+  // Every instruction of a job touches its account, so the account's own transactions (a handful)
+  // carry all of its events; the program-wide scan is only the fallback.
+  const events = await readJobEvents(j.address).catch(async () => (await upstream(readEvents())).events);
   return jobOut(j, events, {
     network: c.network,
     nameOf: n.nameOf,
