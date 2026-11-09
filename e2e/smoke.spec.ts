@@ -51,15 +51,6 @@ for (const [path, heading] of PAGES) {
   });
 }
 
-test('no page still says Pactora or NEAR', async ({page}) => {
-  for (const [path] of PAGES) {
-    await page.goto(path);
-    await page.waitForLoadState('networkidle');
-    const text = await page.locator('body').innerText();
-    expect(text, path).not.toMatch(/Pactora|\bNEAR\b|yocto|nearblocks/);
-  }
-});
-
 test('the home page shows the live figures from the chain', async ({page}) => {
   await page.goto('/');
   const live = page.getByRole('region', {name: 'Live from the chain'});

@@ -24,8 +24,8 @@ describe('safeHref', () => {
     ).toBe('https://explorer.solana.com/address/5pND3A7Xqibq5h9XxY7YtuoJ5TomYKn79usirDBysNRg?cluster=devnet');
   });
 
-  it('no longer admits the Monad explorers', () => {
-    expect(safeHref('https://testnet.monadexplorer.com/tx/0xabc')).toBeNull();
+  it('does not admit explorers of other chains', () => {
+    expect(safeHref('https://etherscan.io/tx/0xabc')).toBeNull();
   });
 
   it('refuses script and data URLs', () => {

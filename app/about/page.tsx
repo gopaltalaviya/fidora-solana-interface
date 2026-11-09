@@ -93,10 +93,7 @@ export default function AboutPage() {
         <li>
           <strong>Not audited.</strong> The program has unit tests and live checks, but no external audit.
         </li>
-        <li>
-          Built for the Encode Club Solana Hackathon, x402 track. Fidora is the Solana edition of a protocol
-          first built on other chains.
-        </li>
+        <li>Built for the Encode Club Solana Hackathon, x402 track.</li>
       </ul>
 
       <h2 id="operator">Who runs it</h2>

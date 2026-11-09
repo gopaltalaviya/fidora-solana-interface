@@ -206,7 +206,7 @@ describe('trustAll: the farm the demo builds', () => {
   });
 });
 
-describe('reputationScore (Pactora’s formula, integer arithmetic)', () => {
+describe('reputationScore (the earlier edition’s formula, integer arithmetic)', () => {
   it('starts at 50 and moves with confidence', () => {
     expect(reputationScore(0, 0)).toBe(50);
     expect(reputationScore(2, 0)).toBe(52);

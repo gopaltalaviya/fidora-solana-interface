@@ -3,8 +3,8 @@
  * clock, so every rule here is unit-tested against fixed inputs.
  *
  * The trust rules are the backend's (fidora-solana-backend src/agents/trust.ts,
- * itself Pactora's), unchanged; `trustScore` and `volume` follow Pactora's
- * packages/db (reputationScoreSql, PER_OWNER_CAP).
+ * itself from the earlier edition of the protocol), unchanged; `trustScore`
+ * and `volume` follow its formula (reputationScoreSql, PER_OWNER_CAP).
  */
 import type {AgentView, ChainEvent, ConfigView, JobView} from './fidora';
 
@@ -13,7 +13,7 @@ export const SELF_FUNDED_SHARE = 0.2;
 export const MAX_FAIL_RATE = 0.3;
 export const MIN_CLIENT_OWNERS = 3;
 export const MAX_TOP_OWNER_SHARE = 0.5;
-/** One owner's payments count toward the trust score at most this many times (Pactora). */
+/** One owner's payments count toward the trust score at most this many times (the earlier edition's rule). */
 export const PER_OWNER_CAP = 3;
 /** Finished jobs before a score moves fully away from 50 (Fidora's off-chain confidenceFloor). */
 export const CONFIDENCE_FLOOR = 25;
@@ -79,7 +79,7 @@ export function reviewScore(a: AgentView): number {
 
 const idiv = (a: number, b: number) => Math.trunc(a / b);
 
-/** Pactora's reputationScoreSql in integer arithmetic, as Postgres runs it. */
+/** The earlier edition's reputationScoreSql in integer arithmetic, as Postgres runs it. */
 export function reputationScore(completed: number, failed: number, floor = CONFIDENCE_FLOOR): number {
   const n = completed + failed;
   const rate = idiv(100 * (completed + 1), n + 2);
@@ -156,7 +156,7 @@ export function agentSummary(
 
 export type Rank = 'balanced' | 'quality' | 'cheapest' | 'fastest';
 
-/** The list the agents page shows: workers only, filtered, ranked like Pactora's modes. */
+/** The list the agents page shows: workers only, filtered, ranked like the earlier edition's modes. */
 export function rankAgents(
   all: AgentSummaryOut[],
   q: {
