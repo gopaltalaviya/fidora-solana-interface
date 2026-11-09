@@ -87,8 +87,8 @@ export default function AboutPage() {
           <strong>Localnet and devnet only.</strong> Test USDC, no value. Mainnet is refused.
         </li>
         <li>
-          <strong>Verified on a local validator.</strong> The full demo and every live check run there. The
-          devnet deployment is waiting for devnet SOL.
+          <strong>Live on devnet.</strong> The program is deployed and initialized on Solana devnet, and this
+          site reads it; the full demo and every live check also run on a local validator.
         </li>
         <li>
           <strong>Not audited.</strong> The program has unit tests and live checks, but no external audit.

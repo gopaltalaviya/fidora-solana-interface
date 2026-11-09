@@ -69,8 +69,8 @@ FIDORA_CLUSTER=localnet pnpm dev     # then open http://localhost:3000`}
       <h2 id="devnet">Point it at devnet</h2>
       <p>
         <code>FIDORA_CLUSTER=devnet pnpm dev</code> reads the program on Solana devnet through the public RPC,
-        or through <code>FIDORA_RPC_URL</code> if you set one. The program&apos;s devnet deployment is still
-        pending devnet SOL; until it is initialized there, the pages say the program cannot be read.
+        or through <code>FIDORA_RPC_URL</code> if you set one. The program is deployed and initialized on
+        devnet; with the public RPC the event history fills in over a few page loads.
       </p>
 
       <h2 id="checks">Every live check</h2>
