@@ -10,6 +10,7 @@ import {
   readAgents,
   readConfig,
   readEvents,
+  readJobEvents,
   readJobs,
   readSlot,
   readVaultBalance,
@@ -141,7 +142,13 @@ export async function job(id: string) {
   const [list, scan, n] = await Promise.all([upstream(readJobs()), upstream(readEvents()), names()]);
   const j = list.find((x) => x.id === id);
   if (!j) throw new NotFound(`no job ${id}`);
-  return jobOut(j, scan.events, {
+  // The job's own transactions, merged with the program-wide scan (which may be partial).
+  const own = await readJobEvents(j.address).catch(() => []);
+  const seen = new Set(scan.events.map((e) => `${e.signature}:${e.name}`));
+  const events = [...scan.events, ...own.filter((e) => !seen.has(`${e.signature}:${e.name}`))].sort(
+    (a, b) => a.slot - b.slot,
+  );
+  return jobOut(j, events, {
     network: c.network,
     nameOf: n.nameOf,
     explorerTx: c.explorerTx,

@@ -396,6 +396,43 @@ export const SCAN_BUDGET_MS = Number(process.env['FIDORA_SCAN_BUDGET_MS'] ?? 20_
 /** Parsed events per transaction signature. A confirmed transaction never changes, so each is read once per process. */
 const parsed = new Map<string, Omit<ChainEvent, 'signature' | 'slot' | 'blockTime'>[]>();
 
+/** The Fidora events in one transaction's logs. */
+function parseLogs(logs: string[]): Omit<ChainEvent, 'signature' | 'slot' | 'blockTime'>[] {
+  const out: {name: string; data: Record<string, string>}[] = [];
+  for (const e of new EventParser(PROGRAM_ID, coder).parseLogs(logs)) {
+    const data: Record<string, string> = {};
+    for (const [k, v] of Object.entries(e.data as Record<string, unknown>)) data[camel(k)] = flat(v);
+    out.push({name: e.name.replace(/^./, (m) => m.toUpperCase()), data});
+  }
+  return out;
+}
+
+/**
+ * The events of one job, read from the job account's own transactions (a
+ * handful), so a job page is complete even while the program-wide scan is
+ * still catching up on a rate-limited RPC.
+ */
+export function readJobEvents(address: string): Promise<ChainEvent[]> {
+  return cachedRead(`job-events:${address}`, async () => {
+    const c = await cluster();
+    const sigs = (
+      await c.connection.getSignaturesForAddress(new PublicKey(address), {limit: 50}, 'confirmed')
+    ).filter((x) => !x.err);
+    const opts = {commitment: 'confirmed', maxSupportedTransactionVersion: 0} as const;
+    const events: ChainEvent[] = [];
+    for (const x of sigs.reverse()) {
+      if (!parsed.has(x.signature)) {
+        const t = await c.connection.getTransaction(x.signature, opts);
+        if (!t) continue;
+        parsed.set(x.signature, parseLogs(t.meta?.logMessages ?? []));
+      }
+      for (const e of parsed.get(x.signature)!)
+        events.push({...e, signature: x.signature, slot: x.slot, blockTime: x.blockTime ?? null});
+    }
+    return events;
+  });
+}
+
 /**
  * Every Fidora event since the start slot, oldest first. `complete` is false
  * when the transaction bound or the time budget was hit first: a partial
@@ -429,16 +466,7 @@ export function readEvents(): Promise<{events: ChainEvent[]; complete: boolean}>
       if (sigs.length >= MAX_TRANSACTIONS) break;
     }
     sigs.sort((a, b) => a.slot - b.slot);
-    const parser = new EventParser(PROGRAM_ID, coder);
-    const parse = (logs: string[]) => {
-      const out: {name: string; data: Record<string, string>}[] = [];
-      for (const e of parser.parseLogs(logs)) {
-        const data: Record<string, string> = {};
-        for (const [k, v] of Object.entries(e.data as Record<string, unknown>)) data[camel(k)] = flat(v);
-        out.push({name: e.name.replace(/^./, (m) => m.toUpperCase()), data});
-      }
-      return out;
-    };
+    const parse = parseLogs;
     const todo = sigs.filter((x) => !parsed.has(x.signature));
     const opts = {commitment: 'confirmed', maxSupportedTransactionVersion: 0} as const;
     try {
@@ -453,8 +481,9 @@ export function readEvents(): Promise<{events: ChainEvent[]; complete: boolean}>
           txs.forEach((t, j) => t && parsed.set(batch[j]!.signature, parse(t.meta?.logMessages ?? [])));
         }
       } else {
-        // The public devnet RPC refuses batched getTransaction calls; one at a time, within the budget.
-        for (const x of todo) {
+        // The public devnet RPC refuses batched getTransaction calls; one at a time, within the budget,
+        // newest first, so the feed shows the latest activity while older history fills in.
+        for (const x of [...todo].reverse()) {
           if (Date.now() - started > SCAN_BUDGET_MS) break;
           const t = await c.connection.getTransaction(x.signature, opts);
           if (t) parsed.set(x.signature, parse(t.meta?.logMessages ?? []));
